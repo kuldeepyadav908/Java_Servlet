@@ -1,0 +1,27 @@
+package com.coursecube.filter;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class FilterB implements Filter{
+	public void destroy() {
+		System.out.println("FilterB -> destroy()");
+	}
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
+		System.out.println("FilterB -> doFilter() Started");
+		chain.doFilter(req, res);
+		System.out.println("FilterB -> doFilter() Completed");
+	}
+	public void init(FilterConfig fc) throws ServletException {
+		System.out.println("FilterB -> init()");
+		
+	}
+
+}

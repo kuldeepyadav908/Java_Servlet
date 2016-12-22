@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<h1>Java Learning Center</h1>
+		<h2>Listener Example</h2>
+		<form action="test.jlc" method="post">
+		<h2>Enter Email</h2>
+		<input type="text" name="email"/>
+		<br/>
+		<input type="submit" name="submit"/>
+		</form>
+		<a href="hello.jlc">Test</a>
+	</body>
+</html>

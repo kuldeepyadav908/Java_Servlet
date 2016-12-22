@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>helloServlet</servlet-name>
+  	<servlet-class>com.coursecube.servlet.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>helloServlet</servlet-name>
+  	<url-pattern>/hello.jlc</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>filterB</filter-name>
+  	<filter-class>com.coursecube.filter.FilterB</filter-class>
+  </filter>
+  
+  <filter>
+  	<filter-name>filterA</filter-name>
+  	<filter-class>com.coursecube.filter.FilterA</filter-class>
+  </filter>
+  
+  <filter>
+  	<filter-name>filterC</filter-name>
+  	<filter-class>com.coursecube.filter.FilterC</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>filterC</filter-name>
+  	<url-pattern>/hello.jlc</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>filterA</filter-name>
+  	<url-pattern>/hello.jlc</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>filterB</filter-name>
+  	<url-pattern>/hello.jlc</url-pattern>
+  </filter-mapping>
+  
+</web-app>
